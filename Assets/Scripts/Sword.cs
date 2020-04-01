@@ -18,7 +18,7 @@ public class Sword : MonoBehaviour
     public float knockTime;
 
 
-    Vector3 mousePos;
+    public Vector3 mousePos;
 
     void Update() {
         if (Input.GetMouseButtonDown(0)) {
