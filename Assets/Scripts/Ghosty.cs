@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ghosty : Enemy
+public class Ghosty : MonoBehaviour
 {
 
     // Start is called before the first frame update
 
 
     // Update is called once per frame
-    new void Update()
+    void Update()
     {
 
     }

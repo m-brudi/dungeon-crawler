@@ -35,6 +35,8 @@ public class MagicSpellGun : MonoBehaviour
                 StartCoroutine("HideMagicGun");
 
                 rb.AddForce(shotPoint.up * bulletSpeed, ForceMode2D.Impulse);
+
+
                 Destroy(bullet, 2f);
                 timeBtwShots = startTimeBtwShots;
             }

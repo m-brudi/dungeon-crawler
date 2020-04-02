@@ -121,6 +121,48 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &47101624 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6956648666325756566, guid: f551cf47abe4d5d419a8d140958ad68c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6956648667055821888}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &47101630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47101624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b866756bb8649854b867626c0d27130e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  chaseRadius: 4
+  attackRadius: 1
+  homePosition: {fileID: 0}
+  moveSpeed: 10
+--- !u!95 &47101631
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47101624}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5a5b819fed4145b499fe14fd85d134ce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &85036496
 GameObject:
   m_ObjectHideFlags: 0
@@ -5414,6 +5456,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2080805966098216096, guid: 6cf9c95a168fa72438c88ec117f899ed,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080805966098216096, guid: 6cf9c95a168fa72438c88ec117f899ed,
+        type: 3}
+      propertyPath: m_SleepingMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080805966098216096, guid: 6cf9c95a168fa72438c88ec117f899ed,
+        type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080805966098216096, guid: 6cf9c95a168fa72438c88ec117f899ed,
+        type: 3}
+      propertyPath: m_Mass
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 2080805966098216098, guid: 6cf9c95a168fa72438c88ec117f899ed,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5509,6 +5571,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Golem
       objectReference: {fileID: 0}
+    - target: {fileID: 2080805966098216124, guid: 6cf9c95a168fa72438c88ec117f899ed,
+        type: 3}
+      propertyPath: m_TagString
+      value: Golem
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cf9c95a168fa72438c88ec117f899ed, type: 3}
 --- !u!1001 &6956648667055821888
@@ -5526,12 +5593,12 @@ PrefabInstance:
     - target: {fileID: 6956648666325756568, guid: f551cf47abe4d5d419a8d140958ad68c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.18
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 6956648666325756568, guid: f551cf47abe4d5d419a8d140958ad68c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2
+      value: 1.54
       objectReference: {fileID: 0}
     - target: {fileID: 6956648666325756568, guid: f551cf47abe4d5d419a8d140958ad68c,
         type: 3}
@@ -5697,7 +5764,7 @@ PrefabInstance:
     - target: {fileID: 8120465141323328930, guid: 32a6b0b500c9dda428fac19e43034056,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8120465142692892801, guid: 32a6b0b500c9dda428fac19e43034056,
         type: 3}

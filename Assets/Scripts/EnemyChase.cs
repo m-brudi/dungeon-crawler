@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class EnemyChase : MonoBehaviour
 {
+    private Rigidbody2D myRigidbody;
     public Transform target;
     public float chaseRadius;
     public float attackRadius;
     public Transform homePosition;
     public float moveSpeed;
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         target = GameObject.FindWithTag("Player").transform;
     }
 
@@ -26,6 +29,11 @@ public class EnemyChase : MonoBehaviour
         if (Vector3.Distance(target.position, transform.position) <= chaseRadius && Vector3.Distance(target.position, transform.position) > attackRadius)
         {
             transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+            anim.SetBool("isWalking", true);
+        }
+        else
+        {
+            anim.SetBool("isWalking", false);
         }
     }
 }
