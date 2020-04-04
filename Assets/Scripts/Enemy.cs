@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
     public int health;
     public string enemyName;
     public int baseAttack;
+    public AudioClip hitSound;
+    public AudioClip deathSound;
 
     public GameObject effect;
     public GameObject blood;
@@ -25,14 +27,17 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
+            //sound
+            AudioSource.PlayClipAtPoint(deathSound, transform.position);
             //particles
             Instantiate(effect, transform.position, Quaternion.identity);
             //bloodstain
             Instantiate(blood, transform.position, Quaternion.identity);
             //shake
             CameraMove.Shake((transform.position - mousePos).normalized, 20f, 0.1f);
-
+            
             Destroy(gameObject);
+            
         }
     }
     public IEnumerator Flash()
@@ -44,6 +49,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDemage(int damage)
     {
+        AudioSource.PlayClipAtPoint(hitSound, transform.position);
         StartCoroutine(Flash());
         health -= damage;
     }

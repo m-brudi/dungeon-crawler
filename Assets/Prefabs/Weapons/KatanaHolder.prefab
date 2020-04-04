@@ -156,6 +156,7 @@ MonoBehaviour:
   damage: 5
   animator: {fileID: 7326336521139033828}
   attackDelay: 0
+  swingSound: {fileID: 8300000, guid: c5e2c596b5095364aa9c72ead164d863, type: 3}
   CameraMove: {fileID: 0}
   cam: {fileID: 0}
   thrust: 5

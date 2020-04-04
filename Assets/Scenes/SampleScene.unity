@@ -5369,6 +5369,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 518488918219974178, guid: f551cf47abe4d5d419a8d140958ad68c,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.809
+      objectReference: {fileID: 0}
+    - target: {fileID: 518488918219974178, guid: f551cf47abe4d5d419a8d140958ad68c,
+        type: 3}
+      propertyPath: m_Pitch
+      value: 1.25
+      objectReference: {fileID: 0}
     - target: {fileID: 6956648666325756566, guid: f551cf47abe4d5d419a8d140958ad68c,
         type: 3}
       propertyPath: m_Name
@@ -6609,6 +6619,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 518488918219974178, guid: f551cf47abe4d5d419a8d140958ad68c,
+        type: 3}
+      propertyPath: Priority
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 518488918219974178, guid: f551cf47abe4d5d419a8d140958ad68c,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1bfa80234bd49324b823ca63b45e07ef, type: 3}
     - target: {fileID: 6956648666325756566, guid: f551cf47abe4d5d419a8d140958ad68c,
         type: 3}
       propertyPath: m_Name
@@ -6683,6 +6703,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6956648666325756569, guid: f551cf47abe4d5d419a8d140958ad68c,
+        type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6998833862029073716, guid: f551cf47abe4d5d419a8d140958ad68c,
+        type: 3}
+      propertyPath: Priority
+      value: 142
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f551cf47abe4d5d419a8d140958ad68c, type: 3}
@@ -6788,6 +6818,10 @@ PrefabInstance:
       propertyPath: attackDelay
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1861299238, guid: 32a6b0b500c9dda428fac19e43034056, type: 3}
+      propertyPath: swingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5b45df2aba5ee774f8fb85ef81ab4bf5, type: 3}
     - target: {fileID: 598056221488642116, guid: 32a6b0b500c9dda428fac19e43034056,
         type: 3}
       propertyPath: m_IsActive
@@ -6843,6 +6877,11 @@ PrefabInstance:
       propertyPath: damage
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5905475180189381981, guid: 32a6b0b500c9dda428fac19e43034056,
+        type: 3}
+      propertyPath: swingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c5e2c596b5095364aa9c72ead164d863, type: 3}
     - target: {fileID: 6647140411088220426, guid: 32a6b0b500c9dda428fac19e43034056,
         type: 3}
       propertyPath: CameraMove

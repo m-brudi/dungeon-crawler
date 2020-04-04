@@ -147,6 +147,8 @@ MonoBehaviour:
   health: 5
   enemyName: 
   baseAttack: 0
+  hitSound: {fileID: 8300000, guid: b5655bb815db31b4ebf0aab25444e6f1, type: 3}
+  deathSound: {fileID: 8300000, guid: 1bfa80234bd49324b823ca63b45e07ef, type: 3}
   effect: {fileID: 7847559219886511027, guid: 8f03f370d8652944993482095a1689ca, type: 3}
   blood: {fileID: 5043947125297122052, guid: 9ee30036dd8f878479602eaf77d41afe, type: 3}
   body: {fileID: 6956648666325756567}

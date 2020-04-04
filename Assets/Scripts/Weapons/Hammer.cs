@@ -10,6 +10,7 @@ public class Hammer : MonoBehaviour
     public int damage;
     public Animator animator;
     public float attackDelay = 0.4f;
+    public AudioClip swingSound;
 
     public CameraMove CameraMove;
     public Camera cam;
@@ -28,6 +29,7 @@ public class Hammer : MonoBehaviour
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
         animator.SetTrigger("Attack");
+        AudioSource.PlayClipAtPoint(swingSound, transform.position);
         StartCoroutine(AttackDelay());
     }
 

@@ -11,6 +11,7 @@ public class Katana : MonoBehaviour
     public int damage;
     public Animator animator;
     public float attackDelay = 0.5f;
+    public AudioClip swingSound;
 
 
     public CameraMove CameraMove;
@@ -31,6 +32,7 @@ public class Katana : MonoBehaviour
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
         animator.SetTrigger("Attack");
+        AudioSource.PlayClipAtPoint(swingSound, transform.position);
         StartCoroutine(AttackDelay());
 
     }

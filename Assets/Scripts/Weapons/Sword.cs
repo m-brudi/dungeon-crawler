@@ -11,6 +11,7 @@ public class Sword : MonoBehaviour
     public int damage;
     public Animator animator;
     public float attackDelay = 0.1f;
+    public AudioClip swingSound;
 
     public CameraMove CameraMove;
     public Camera cam;
@@ -28,27 +29,10 @@ public class Sword : MonoBehaviour
     }
     public void attack() {
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-
+        AudioSource.PlayClipAtPoint(swingSound, transform.position);
         animator.SetTrigger("Attack");
         StartCoroutine(AttackDelay());
-        //Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemies);
 
-        //CameraMove.Shake((transform.position - mousePos).normalized, 5f, 0.1f);
-
-        //for (int i = 0; i < enemiesToDamage.Length; i++) {
-
-        //    //knockback
-        //    Rigidbody2D enemy = enemiesToDamage[i].GetComponent<Rigidbody2D>();
-        //    enemiesToDamage[i].GetComponent<Enemy>().TakeDemage(damage);
-
-        //    if (enemy != null) {
-        //        enemy.isKinematic = false;
-        //        Vector2 difference = enemy.transform.position - transform.position;
-        //        difference = difference.normalized * thrust;
-        //        enemy.AddForce(difference, ForceMode2D.Impulse);
-        //        StartCoroutine(KnockCo(enemy));
-        //    }
-        //}
     }
 
     private IEnumerator AttackDelay() {
