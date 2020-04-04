@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Enemy : MonoBehaviour
 {
@@ -19,7 +20,9 @@ public class Enemy : MonoBehaviour
     public Camera cam;
     public Vector3 mousePos;
 
-
+    private void Start() {
+        
+    }
     // Update is called once per frame
     public void Update()
     {
@@ -29,6 +32,7 @@ public class Enemy : MonoBehaviour
         {
             //sound
             AudioSource.PlayClipAtPoint(deathSound, transform.position);
+            
             //particles
             Instantiate(effect, transform.position, Quaternion.identity);
             //bloodstain
@@ -49,8 +53,23 @@ public class Enemy : MonoBehaviour
 
     public void TakeDemage(int damage)
     {
-        AudioSource.PlayClipAtPoint(hitSound, transform.position);
+        PlayClipAt(hitSound, transform.position);
         StartCoroutine(Flash());
         health -= damage;
+    }
+
+    //experimenting with audio effects
+    //basically custom PlayClipAtPoint method;
+    AudioSource PlayClipAt(AudioClip clip, Vector3 pos) {
+        GameObject tempGO = new GameObject("TempAudio"); // create the temp object
+        tempGO.transform.position = pos; // set its position
+        AudioSource aSource = tempGO.AddComponent<AudioSource>(); // add an audio source
+        aSource.clip = clip; // define the clip
+                             // set other aSource properties here, if desired
+        aSource.pitch = Random.Range(1, 1.5f);
+        aSource.volume = 0.1f;
+        aSource.Play(); // start the sound
+        Destroy(tempGO, clip.length); // destroy object after clip duration
+        return aSource; // return the AudioSource reference
     }
 }

@@ -6595,6 +6595,16 @@ PrefabInstance:
       propertyPath: hurtColor.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2080805966098216102, guid: 6cf9c95a168fa72438c88ec117f899ed,
+        type: 3}
+      propertyPath: hitSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b5655bb815db31b4ebf0aab25444e6f1, type: 3}
+    - target: {fileID: 2080805966098216102, guid: 6cf9c95a168fa72438c88ec117f899ed,
+        type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 1bfa80234bd49324b823ca63b45e07ef, type: 3}
     - target: {fileID: 2080805966098216103, guid: 6cf9c95a168fa72438c88ec117f899ed,
         type: 3}
       propertyPath: m_Enabled
