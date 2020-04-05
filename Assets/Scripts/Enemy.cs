@@ -27,7 +27,6 @@ public class Enemy : MonoBehaviour
     public void Update()
     {
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-
         if (health <= 0)
         {
             //sound

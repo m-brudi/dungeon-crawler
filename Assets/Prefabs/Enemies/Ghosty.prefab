@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 6956648666325756571}
   - component: {fileID: 6956648666325756570}
   - component: {fileID: 6956648666325756569}
+  - component: {fileID: 47101632}
+  - component: {fileID: 47101631}
+  - component: {fileID: 47101630}
   m_Layer: 8
   m_Name: Ghosty
   m_TagString: Untagged
@@ -29,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 6956648666325756566}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.261, y: 1.281, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -144,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be1a619221f904145aa8ecd20a7dec2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
+  health: 6
   enemyName: 
   baseAttack: 0
   hitSound: {fileID: 8300000, guid: b5655bb815db31b4ebf0aab25444e6f1, type: 3}
@@ -153,6 +156,68 @@ MonoBehaviour:
   blood: {fileID: 5043947125297122052, guid: 9ee30036dd8f878479602eaf77d41afe, type: 3}
   body: {fileID: 6956648666325756567}
   hurtColor: {r: 1, g: 0, b: 0, a: 1}
-  CameraMove: {fileID: 0}
-  cam: {fileID: 0}
+  CameraMove: {fileID: 7336655724004355358, guid: 1c44399cca2c8504ba8565bd19a0e66f,
+    type: 3}
+  cam: {fileID: 7336655724004355359, guid: 1c44399cca2c8504ba8565bd19a0e66f, type: 3}
   mousePos: {x: 0, y: 0, z: 0}
+--- !u!61 &47101632
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6956648666325756566}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.007024288, y: -0.06321728}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.620698, y: 0.87356544}
+  m_EdgeRadius: 0
+--- !u!95 &47101631
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6956648666325756566}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5a5b819fed4145b499fe14fd85d134ce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &47101630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6956648666325756566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05c03f3e435b4ae4ea7643bfe9809cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  enemyRB: {fileID: 6956648666325756571}
+  thrust: 15
+  knockTime: 0.2
