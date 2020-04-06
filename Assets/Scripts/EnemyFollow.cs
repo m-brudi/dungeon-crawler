@@ -25,6 +25,14 @@ public class EnemyFollow : MonoBehaviour
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+
+        float diff = player.transform.position.x - transform.position.x;
+        if(diff > 0) {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+        else {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
@@ -37,6 +45,14 @@ public class EnemyFollow : MonoBehaviour
             enemyRB.AddForce(difference, ForceMode2D.Impulse);
             StartCoroutine(KnockCo(enemyRB));
             player.GetComponent<Health>().TakeDamage(1);
+        }
+        if(collision.gameObject.name == "Ghosty") {
+            //knockback
+            enemyRB.isKinematic = false;
+            Vector2 difference = transform.position - collision.transform.position;
+            difference = difference.normalized * 5;
+            enemyRB.AddForce(difference, ForceMode2D.Impulse);
+            StartCoroutine(KnockCo(enemyRB));
         }
     }
 

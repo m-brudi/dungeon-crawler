@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4938623708981047654}
   - component: {fileID: 6359369688427439682}
   m_Layer: 0
-  m_Name: GreenMagicBullet 1
+  m_Name: GreenBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -154,6 +154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a608942ff57b4648bb1970d3fc4e44d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CameraMove: {fileID: 0}
   greenhit: {fileID: 7847559219886511027, guid: 5d1e7f9a10378084fb2d782f4536cc4d,
     type: 3}
+  damage: 2

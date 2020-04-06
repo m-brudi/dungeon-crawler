@@ -57,6 +57,12 @@ public class Enemy : MonoBehaviour
         health -= damage;
     }
 
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if(collision.gameObject.name == "GreenBullet(Clone)") {
+            TakeDemage(collision.gameObject.GetComponent<MagicBullet>().damage);
+        }
+    }
+
     //experimenting with audio effects
     //basically custom PlayClipAtPoint method;
     AudioSource PlayClipAt(AudioClip clip, Vector3 pos) {
