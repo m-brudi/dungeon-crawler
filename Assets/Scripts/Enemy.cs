@@ -59,7 +59,7 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if(collision.gameObject.name == "GreenBullet(Clone)") {
-            TakeDemage(collision.gameObject.GetComponent<MagicBullet>().damage);
+            //TakeDemage(collision.gameObject.GetComponent<MagicBullet>().damage);
         }
     }
 

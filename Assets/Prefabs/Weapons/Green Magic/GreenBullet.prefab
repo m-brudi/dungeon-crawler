@@ -156,4 +156,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   greenhit: {fileID: 7847559219886511027, guid: 5d1e7f9a10378084fb2d782f4536cc4d,
     type: 3}
+  greenRange: {fileID: 6652166654276720810, guid: 046bac99d49429e45bd309716f384c98,
+    type: 3}
+  attackRadius: 4
+  whatIsEnemies:
+    serializedVersion: 2
+    m_Bits: 256
   damage: 2
+  knockTime: 0.3

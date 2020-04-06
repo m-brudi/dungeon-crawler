@@ -1,0 +1,111 @@
+[33mcommit 546e0f424cf45a4d31ec5f2e5e45471aa5fcfc5f[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Maks Leone <maksymilian.leone@smith-nephew.com>
+Date:   Mon Apr 6 16:31:28 2020 +0200
+
+    Collectibles added - ML
+
+[33mcommit fe06885aee353fc9b5ad28057e71a34f629bd3c2[m
+Author: Michał <brudermichal@gmail.com>
+Date:   Mon Apr 6 13:22:28 2020 +0200
+
+    really small fix
+
+[33mcommit 748f9d2f44583b7510f63e4ac24d5f11f029cae9[m
+Author: Michał <brudermichal@gmail.com>
+Date:   Mon Apr 6 13:15:18 2020 +0200
+
+    small fixes
+
+[33mcommit 437c1e7fdd2dd757723b2e9e5ed6e14ffd761f0c[m
+Author: Michał <brudermichal@gmail.com>
+Date:   Mon Apr 6 11:04:48 2020 +0200
+
+    Necromancer improvements
+
+[33mcommit 5326cfccc9a02614c6bdd5c8d535a049f36a5508[m
+Author: Michał <brudermichal@gmail.com>
+Date:   Sun Apr 5 22:55:58 2020 +0200
+
+    Health System and Necromancer
+    
+    you can die now
+    necromancer that spawns enemies who can kill you
+
+[33mcommit ddcffcd8a61eec432b6e103bbfd1fd05f686c25f[m
+Author: Michał <brudermichal@gmail.com>
+Date:   Sun Apr 5 11:17:41 2020 +0200
+
+    Small fixes in inventory system
+
+[33mcommit acf388ccb3ff8b425b5b87aae80a8c3a364c1f32[m
+Author: Michał <brudermichal@gmail.com>
+Date:   Sun Apr 5 01:48:29 2020 +0200
+
+    Inventory system - MB
+
+[33mcommit 87d61a4b34e1b71fa166590cf8846f12064f280e[m
+Author: Michał <brudermichal@gmail.com>
+Date:   Sat Apr 4 18:44:42 2020 +0200
+
+    weapons pickups
+
+[33mcommit bf790a8c27d4fc3b80d74e3facf30b8eaa8eae68[m
+Author: Michał <brudermichal@gmail.com>
+Date:   Sat Apr 4 17:21:04 2020 +0200
+
+    little improvement in enemies hit sound effect
+
+[33mcommit fb9dc43049ef735c0ea27b0472e4788b8fb45681[m
+Author: Michał <brudermichal@gmail.com>
+Date:   Sat Apr 4 14:40:52 2020 +0200
+
+    silly sound effects added - MB
+
+[33mcommit 8bb32e623d1d70e48d30643661d3cb05e6e935b2[m
+Author: Michał <brudermichal@gmail.com>
+Date:   Sat Apr 4 01:20:11 2020 +0200
+
+    Weapons  - MB
+    
+    2 new weapons and animations
+    some code and structure cleaning
+
+[33mcommit ee9e63055abd1218df12f9da8b2205a19af98e1d[m
+Merge: e8390d6 84598ae
+Author: Maks Leone <maksymilian.leone@smith-nephew.com>
+Date:   Thu Apr 2 15:53:25 2020 +0200
+
+    Merge branch 'master' of https://github.com/m-brudi/dungeon-crawler
+
+[33mcommit e8390d63396ee30388ab1998644f0599f7a6426c[m
+Author: Maks Leone <maksymilian.leone@smith-nephew.com>
+Date:   Thu Apr 2 15:51:57 2020 +0200
+
+    EnemyChase and Golem animation - ML
+
+[33mcommit 84598aeb1ba666ec04b4270a3694c8522bfa5534[m
+Author: Michał <brudermichal@gmail.com>
+Date:   Thu Apr 2 10:58:30 2020 +0200
+
+    small changes in structure - MB
+
+[33mcommit 612a62401e3ee9fa62ffa6fa943d60a0436dbd6e[m
+Author: Maks Leone <maksymilian.leone@smith-nephew.com>
+Date:   Wed Apr 1 20:14:09 2020 +0200
+
+    Small changes in code order, added EnemyChase.cs - ML
+
+[33mcommit 59acd8f8b1083926e681cd5bfae8effb718878dd[m
+Author: Michał <brudermichal@gmail.com>
+Date:   Wed Apr 1 14:28:02 2020 +0200
+
+    1 Version
+    
+    character movement
+    sword, spell, dash
+
+[33mcommit 2149ce3443c3663acf7f0f288463bee9c6dce59a[m
+Author: Michał <brudermichal@gmail.com>
+Date:   Wed Apr 1 14:17:48 2020 +0200
+
+    Initial commit
