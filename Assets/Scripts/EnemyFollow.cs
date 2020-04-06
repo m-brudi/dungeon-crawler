@@ -37,7 +37,6 @@ public class EnemyFollow : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.name == "PlayerHolder") {
-
             //knockback
             enemyRB.isKinematic = false;
             Vector2 difference = transform.position - collision.transform.position;
@@ -46,7 +45,8 @@ public class EnemyFollow : MonoBehaviour
             StartCoroutine(KnockCo(enemyRB));
             player.GetComponent<Health>().TakeDamage(1);
         }
-        if(collision.gameObject.name == "Ghosty") {
+
+        if(collision.gameObject.tag == "Enemy") {
             //knockback
             enemyRB.isKinematic = false;
             Vector2 difference = transform.position - collision.transform.position;

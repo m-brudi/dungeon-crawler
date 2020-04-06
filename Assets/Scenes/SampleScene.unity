@@ -7083,6 +7083,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Necromancer
       objectReference: {fileID: 0}
+    - target: {fileID: 8432212137094581520, guid: 05af2f69da821df44a563bdc038fc0f7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 8432212137094581533, guid: 05af2f69da821df44a563bdc038fc0f7,
         type: 3}
       propertyPath: spawnMax
