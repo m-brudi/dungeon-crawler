@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Golem
   - Enemy
+  - Collectibles
   layers:
   - Default
   - TransparentFX
