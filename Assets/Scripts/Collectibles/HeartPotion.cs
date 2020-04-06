@@ -17,7 +17,7 @@ public class HeartPotion : MonoBehaviour
         {
             Destroy(gameObject);
             playerHealth.numOfHearts++;
-            playerHealth.health++;
+            playerHealth.health = playerHealth.numOfHearts;
         }
     }
 }
