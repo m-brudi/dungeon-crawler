@@ -41,7 +41,6 @@ public class Health : MonoBehaviour
         }
 
         if(health < 1) {
-            body.enabled = false;
             StartCoroutine(Death());
            
         }
@@ -49,7 +48,9 @@ public class Health : MonoBehaviour
     }
 
     public IEnumerator Death() {
-        yield return new WaitForSeconds(1);
+        Time.timeScale = 0.1f;
+        yield return new WaitForSeconds(.3f);
+        Time.timeScale = 1;
         SceneManager.LoadScene("SampleScene");
     }
 
