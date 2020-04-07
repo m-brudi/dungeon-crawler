@@ -17,10 +17,13 @@ public class TreasureChest : MonoBehaviour
 
     public void Start()
     {
-        
         anim = GetComponent<Animator>();
     }
 
+    private void OnValidate()
+    {
+        lootDropTable.ValidateTable();
+    }
 
     // Update is called once per frame
 
@@ -39,14 +42,10 @@ public class TreasureChest : MonoBehaviour
     public void OnTriggerStay2D(Collider2D collision)
     {
         rndPosX = rnd.Next(1, 3);
-        if (collision.CompareTag("Player")) {
-            //anim.SetBool("isOpen", true);
-            //anim.SetBool("isClosed", false);
-            if (Input.GetKey(KeyCode.LeftShift) && !used) {
+        if (collision.CompareTag("Player") && Input.GetKey(KeyCode.LeftShift) && !used) {
                 used = true;
                 anim.SetBool("isEmpty", true);
                 DropLootNearChest(numItemsToDrop);
-            }
         }
 
     }
@@ -55,7 +54,6 @@ public class TreasureChest : MonoBehaviour
     {
         for(int i = 0; i < numItemsToDrop; i++)
         {
-            anim.SetBool("isOpen", true);
             GenericLootDropItemGameObject selectedItem = lootDropTable.PickLootDropItem();
             GameObject selectedItemGameObject = Instantiate(selectedItem.item);
             selectedItemGameObject.transform.position = new Vector3(i / 2F, 0.2f);
