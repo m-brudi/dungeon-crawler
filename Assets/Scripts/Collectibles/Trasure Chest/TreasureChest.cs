@@ -9,6 +9,7 @@ public class TreasureChest : MonoBehaviour
     public int numItemsToDrop;
     private Animator anim;
     private int rndPosX;
+    private bool used = false;
 
     System.Random rnd = new System.Random();
 
@@ -22,14 +23,26 @@ public class TreasureChest : MonoBehaviour
 
 
     // Update is called once per frame
-    public void OnTriggerEnter2D(Collider2D collision)
+
+    public void OnTriggerExit2D(Collider2D collision) {
+        if (collision.CompareTag("Player")) {
+            anim.SetBool("isClosed", true);
+            anim.SetBool("isOpen", false);
+        }
+    }
+    public void OnTriggerStay2D(Collider2D collision)
     {
         rndPosX = rnd.Next(1, 3);
-
-        if (collision.CompareTag("Player"))
-        {
+        if (collision.CompareTag("Player")) {
+            anim.SetBool("isOpen", true);
+            anim.SetBool("isClosed", false);
+            if (Input.GetKey(KeyCode.LeftShift) && !used) {
+                used = true;
+                anim.SetBool("isEmpty", true);
                 DropLootNearChest(numItemsToDrop);
+            }
         }
+
     }
 
     private void DropLootNearChest(int numItemsToDrop)
