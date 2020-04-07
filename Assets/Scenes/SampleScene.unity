@@ -5984,6 +5984,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1522424827}
   m_CullTransparentMesh: 0
+--- !u!1 &1605292903 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6813820985047631869, guid: a4eb61348f7adde498d55e5fbf7d63e8,
+    type: 3}
+  m_PrefabInstance: {fileID: 6813820985252186248}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1605292910
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605292903}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.20165873}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.59668255}
+  m_EdgeRadius: 0
 --- !u!1 &1655922745 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6462708584471350885, guid: 5c03b5a44183dfa4280d2f8d6c67d4a8,
@@ -6701,12 +6733,12 @@ PrefabInstance:
     - target: {fileID: 6813820985047631871, guid: a4eb61348f7adde498d55e5fbf7d63e8,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.75228834
+      value: -0.24814177
       objectReference: {fileID: 0}
     - target: {fileID: 6813820985047631871, guid: a4eb61348f7adde498d55e5fbf7d63e8,
         type: 3}
       propertyPath: m_Size.y
-      value: 1.3765783
+      value: 2.3848715
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4eb61348f7adde498d55e5fbf7d63e8, type: 3}

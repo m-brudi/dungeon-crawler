@@ -30,12 +30,18 @@ public class TreasureChest : MonoBehaviour
             anim.SetBool("isOpen", false);
         }
     }
+    public void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.CompareTag("Player")) {
+            anim.SetBool("isClosed", false);
+            anim.SetBool("isOpen", true);
+        }
+    }
     public void OnTriggerStay2D(Collider2D collision)
     {
         rndPosX = rnd.Next(1, 3);
         if (collision.CompareTag("Player")) {
-            anim.SetBool("isOpen", true);
-            anim.SetBool("isClosed", false);
+            //anim.SetBool("isOpen", true);
+            //anim.SetBool("isClosed", false);
             if (Input.GetKey(KeyCode.LeftShift) && !used) {
                 used = true;
                 anim.SetBool("isEmpty", true);
