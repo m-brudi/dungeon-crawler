@@ -12,6 +12,7 @@ public class Katana : MonoBehaviour
     public Animator animator;
     public float attackDelay = 0.5f;
     public AudioClip swingSound;
+    public ParticleSystem katanaPS;
 
 
     public CameraMove CameraMove;
@@ -27,21 +28,21 @@ public class Katana : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) {
             attack();
         }
+
     }
     public void attack() {
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-
         animator.SetTrigger("Attack");
         AudioSource.PlayClipAtPoint(swingSound, transform.position);
+        
         StartCoroutine(AttackDelay());
-
     }
 
     //short delay to match animation
     private IEnumerator AttackDelay() {
         yield return new WaitForSeconds(attackDelay);
         Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemies);
-
+        katanaPS.Play();
         CameraMove.Shake((transform.position - mousePos).normalized, 5f, 0.1f);
 
         for (int i = 0; i < enemiesToDamage.Length; i++) {
