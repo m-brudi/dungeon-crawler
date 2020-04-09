@@ -25,8 +25,10 @@ public class Enemy : MonoBehaviour
     public void Update()
     {
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        
         if (health <= 0)
         {
+            Debug.Log("umar");
             //sound
             AudioSource.PlayClipAtPoint(deathSound, transform.position);
             
@@ -38,7 +40,6 @@ public class Enemy : MonoBehaviour
             CameraMove.Shake((transform.position - mousePos).normalized, 20f, 0.1f);
             
             Destroy(gameObject);
-            
         }
     }
     public IEnumerator Flash()
@@ -53,12 +54,6 @@ public class Enemy : MonoBehaviour
         PlayClipAt(hitSound, transform.position);
         StartCoroutine(Flash());
         health -= damage;
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision) {
-        if(collision.gameObject.name == "GreenBullet(Clone)") {
-            //TakeDemage(collision.gameObject.GetComponent<MagicBullet>().damage);
-        }
     }
 
     //experimenting with audio effects

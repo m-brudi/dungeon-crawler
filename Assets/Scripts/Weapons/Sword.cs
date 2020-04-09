@@ -53,7 +53,6 @@ public class Sword : MonoBehaviour
                 enemy.AddForce(difference, ForceMode2D.Impulse);
                 StartCoroutine(KnockCo(enemy));
             }
-
         }
     }
 
