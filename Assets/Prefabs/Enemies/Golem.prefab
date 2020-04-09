@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2080805966098216096}
   - component: {fileID: 2080805966098216097}
   - component: {fileID: 2080805966098216102}
+  - component: {fileID: -2994098808397316314}
   m_Layer: 8
   m_Name: Golem
   m_TagString: Untagged
@@ -150,7 +151,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 2.2958012, y: 1.456811}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.03
 --- !u!114 &2080805966098216102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,9 +164,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be1a619221f904145aa8ecd20a7dec2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 5
   enemyName: 
   baseAttack: 0
+  hitSound: {fileID: 8300000, guid: b5655bb815db31b4ebf0aab25444e6f1, type: 3}
+  deathSound: {fileID: 8300000, guid: 1bfa80234bd49324b823ca63b45e07ef, type: 3}
   effect: {fileID: 7847559219886511027, guid: 8f03f370d8652944993482095a1689ca, type: 3}
   blood: {fileID: 5043947125297122052, guid: 9ee30036dd8f878479602eaf77d41afe, type: 3}
   body: {fileID: 2080805966098216099}
@@ -173,3 +176,19 @@ MonoBehaviour:
   CameraMove: {fileID: 0}
   cam: {fileID: 0}
   mousePos: {x: 0, y: 0, z: 0}
+--- !u!114 &-2994098808397316314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080805966098216124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05c03f3e435b4ae4ea7643bfe9809cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  enemyRB: {fileID: 2080805966098216096}
+  thrust: 15
+  knockTime: 0.2

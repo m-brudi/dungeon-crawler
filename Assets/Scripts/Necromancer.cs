@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Necromancer : MonoBehaviour
+public class Necromancer : Enemy
 {
     public float spawnRadius;
     public GameObject objectToSpawn;
@@ -21,10 +21,7 @@ public class Necromancer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 
     private void SpawnEnemies() {
         float enemiesNum = Random.Range(spawnMin, spawnMax);

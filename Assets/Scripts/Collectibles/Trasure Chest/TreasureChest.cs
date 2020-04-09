@@ -56,7 +56,7 @@ public class TreasureChest : MonoBehaviour
         {
             GenericLootDropItemGameObject selectedItem = lootDropTable.PickLootDropItem();
             GameObject selectedItemGameObject = Instantiate(selectedItem.item);
-            selectedItemGameObject.transform.position = new Vector3(i / 2F, 0.2f);
+            selectedItemGameObject.transform.position = new Vector3(i / transform.position.x + 2, transform.position.y);
         }
        
     }

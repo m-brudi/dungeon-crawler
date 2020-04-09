@@ -7,8 +7,6 @@ using Random = UnityEngine.Random;
 public class Enemy : MonoBehaviour
 {
     public int health;
-    public string enemyName;
-    public int baseAttack;
     public AudioClip hitSound;
     public AudioClip deathSound;
 

@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8432212137094581534}
   - component: {fileID: 8432212137094581535}
   - component: {fileID: 8432212137094581533}
-  - component: {fileID: 5828021955130214476}
   - component: {fileID: 1158209637332343530}
+  - component: {fileID: 872196888}
   m_Layer: 8
   m_Name: Necromancer
   m_TagString: Untagged
@@ -97,30 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0144061d4d8a11e4f8b01aa583d84f02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRadius: 4
-  objectToSpawn: {fileID: 6956648666325756566, guid: f551cf47abe4d5d419a8d140958ad68c,
-    type: 3}
-  spawnPoint: {fileID: 608662264330130041, guid: df5c5de35d45d394f97c979e5a9921d9,
-    type: 3}
-  spawnMin: 1
-  spawnMax: 3
-  spawnTimeMin: 10
-  spawnTimeMax: 15
---- !u!114 &5828021955130214476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8432212137094581520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be1a619221f904145aa8ecd20a7dec2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   health: 10
-  enemyName: 
-  baseAttack: 0
   hitSound: {fileID: 8300000, guid: b5655bb815db31b4ebf0aab25444e6f1, type: 3}
   deathSound: {fileID: 8300000, guid: 1bfa80234bd49324b823ca63b45e07ef, type: 3}
   effect: {fileID: 7847559219886511027, guid: 8f03f370d8652944993482095a1689ca, type: 3}
@@ -130,6 +107,15 @@ MonoBehaviour:
   CameraMove: {fileID: 0}
   cam: {fileID: 0}
   mousePos: {x: 0, y: 0, z: 0}
+  spawnRadius: 4
+  objectToSpawn: {fileID: 6956648666325756566, guid: f551cf47abe4d5d419a8d140958ad68c,
+    type: 3}
+  spawnPoint: {fileID: 608662264330130041, guid: df5c5de35d45d394f97c979e5a9921d9,
+    type: 3}
+  spawnMin: 1
+  spawnMax: 1
+  spawnTimeMin: 15
+  spawnTimeMax: 15
 --- !u!61 &1158209637332343530
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -156,3 +142,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.84545135, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &872196888
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8432212137094581520}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1000
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

@@ -22,18 +22,28 @@ public class EnemyChase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float diff = target.transform.position.x - transform.position.x;
+        if (diff > 0)
+        {
+
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+        else
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
         CheckDistance();
     }
     void CheckDistance()
     {
         if (Vector3.Distance(target.position, transform.position) <= chaseRadius && Vector3.Distance(target.position, transform.position) > attackRadius)
         {
+
             transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
-            anim.SetBool("isWalking", true);
+            anim.SetTrigger("Walking");
         }
         else
-        {
-            anim.SetBool("isWalking", false);
-        }
+            anim.SetTrigger("notWalking");
+     
     }
 }

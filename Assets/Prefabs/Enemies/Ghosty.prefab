@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 6956648666325756567}
   - component: {fileID: 6956648666325756571}
   - component: {fileID: 6956648666325756570}
-  - component: {fileID: 6956648666325756569}
   - component: {fileID: 47101632}
   - component: {fileID: 47101631}
   - component: {fileID: 47101630}
+  - component: {fileID: 3799740492722700576}
   m_Layer: 8
   m_Name: Ghosty
   m_TagString: Enemy
@@ -135,31 +135,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6189588, y: 0.87403226}
   m_EdgeRadius: 0
---- !u!114 &6956648666325756569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6956648666325756566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be1a619221f904145aa8ecd20a7dec2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 6
-  enemyName: 
-  baseAttack: 0
-  hitSound: {fileID: 8300000, guid: b5655bb815db31b4ebf0aab25444e6f1, type: 3}
-  deathSound: {fileID: 8300000, guid: 1bfa80234bd49324b823ca63b45e07ef, type: 3}
-  effect: {fileID: 7847559219886511027, guid: 8f03f370d8652944993482095a1689ca, type: 3}
-  blood: {fileID: 5043947125297122052, guid: 9ee30036dd8f878479602eaf77d41afe, type: 3}
-  body: {fileID: 6956648666325756567}
-  hurtColor: {r: 1, g: 0, b: 0, a: 1}
-  CameraMove: {fileID: 7336655724004355358, guid: 1c44399cca2c8504ba8565bd19a0e66f,
-    type: 3}
-  cam: {fileID: 7336655724004355359, guid: 1c44399cca2c8504ba8565bd19a0e66f, type: 3}
-  mousePos: {x: 0, y: 0, z: 0}
 --- !u!61 &47101632
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -221,3 +196,26 @@ MonoBehaviour:
   enemyRB: {fileID: 6956648666325756571}
   thrust: 15
   knockTime: 0.2
+--- !u!114 &3799740492722700576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6956648666325756566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec14112dd352e94097af4869e767a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  hitSound: {fileID: 8300000, guid: b5655bb815db31b4ebf0aab25444e6f1, type: 3}
+  deathSound: {fileID: 8300000, guid: 1bfa80234bd49324b823ca63b45e07ef, type: 3}
+  effect: {fileID: 7847559219886511027, guid: 8f03f370d8652944993482095a1689ca, type: 3}
+  blood: {fileID: 5043947125297122052, guid: 9ee30036dd8f878479602eaf77d41afe, type: 3}
+  body: {fileID: 6956648666325756567}
+  hurtColor: {r: 1, g: 0, b: 0, a: 1}
+  CameraMove: {fileID: 7336655724004355358, guid: 1c44399cca2c8504ba8565bd19a0e66f,
+    type: 3}
+  cam: {fileID: 7336655724004355359, guid: 1c44399cca2c8504ba8565bd19a0e66f, type: 3}
+  mousePos: {x: 0, y: 0, z: 0}

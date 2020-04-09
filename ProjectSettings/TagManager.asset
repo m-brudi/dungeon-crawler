@@ -7,6 +7,7 @@ TagManager:
   - Golem
   - Enemy
   - Collectibles
+  - Axe
   layers:
   - Default
   - TransparentFX
