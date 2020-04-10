@@ -5336,6 +5336,22 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 252680202, guid: ca226e4d3ba9f6446ba58c236a765be1, type: 3}
+      propertyPath: chaseRadius
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 252680202, guid: ca226e4d3ba9f6446ba58c236a765be1, type: 3}
+      propertyPath: biggerChaseRadius
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 252680202, guid: ca226e4d3ba9f6446ba58c236a765be1, type: 3}
+      propertyPath: seeRadius
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 252680202, guid: ca226e4d3ba9f6446ba58c236a765be1, type: 3}
+      propertyPath: ChaseRadius
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5811868846702071039, guid: ca226e4d3ba9f6446ba58c236a765be1,
         type: 3}
       propertyPath: m_Offset.y
