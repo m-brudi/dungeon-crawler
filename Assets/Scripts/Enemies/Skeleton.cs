@@ -132,7 +132,6 @@ public class Skeleton: Enemy
     //Time to wait before goin back to homeposition
     private IEnumerator WaitForReturn() {
         returnTime = UnityEngine.Random.Range(3,5);
-        Debug.Log(returnTime);
         yield return new WaitForSeconds(returnTime);
         doneWaiting = true;
     }

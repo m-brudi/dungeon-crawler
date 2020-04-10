@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Collectibles
   - Axe
+  - SpawnPoint
+  - Rooms
   layers:
   - Default
   - TransparentFX
