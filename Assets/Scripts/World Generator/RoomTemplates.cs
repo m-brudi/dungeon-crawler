@@ -14,12 +14,13 @@ public class RoomTemplates : MonoBehaviour
     public List<GameObject> rooms;
 
     public float waitTime;
-    private bool spawnedEnd;
+    private bool spawnedEnd = false;
     public GameObject endObject;
 
     private void Update() {
-        if(waitTime <=0 && !spawnedEnd) {
+        if (waitTime <= 0 && !spawnedEnd) {
             Instantiate(endObject, rooms[rooms.Count - 1].transform.position, Quaternion.identity);
+            spawnedEnd = true;
         } else {
             waitTime -= Time.deltaTime;
         }
