@@ -7,6 +7,7 @@ public class Necromancer : Enemy
     public float spawnRadius;
     public GameObject objectToSpawn;
     public GameObject spawnPoint;
+    private GameObject player;
     public float spawnMin;
     public float spawnMax;
     private Vector2 position;
@@ -14,14 +15,24 @@ public class Necromancer : Enemy
     public float spawnTimeMin;
     public float spawnTimeMax;
 
+    private float diffX;
+    private float diffY;
+
     // Start is called before the first frame update
     void Start()
     {
-        SpawnEnemies();
+        player = GameObject.FindGameObjectWithTag("Player");
+        diffX = player.transform.position.x - transform.position.x;
+        diffY = player.transform.position.y - transform.position.y;
+
+        StartCoroutine(Spawn());
+
     }
 
-    // Update is called once per frame
-
+    private void Update() {
+        diffX = player.transform.position.x - transform.position.x;
+        diffY = player.transform.position.y - transform.position.y;
+    }
 
     private void SpawnEnemies() {
         float enemiesNum = Random.Range(spawnMin, spawnMax);
@@ -34,7 +45,9 @@ public class Necromancer : Enemy
             StartCoroutine(Wait(position, spawn));
             
         }
-        StartCoroutine(Spawn());
+        if (Mathf.Abs(diffX) < 20 && Mathf.Abs(diffY) < 20) {
+            StartCoroutine(Spawn());
+        }
     }
     private IEnumerator Wait(Vector2 position, GameObject spawn) {
         yield return new WaitForSeconds(2);

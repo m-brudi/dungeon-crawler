@@ -24,10 +24,13 @@ public class EnemyFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-
-        float diff = player.transform.position.x - transform.position.x;
-        if(diff > 0) {
+        float diffX = player.transform.position.x - transform.position.x;
+        float diffY = player.transform.position.y - transform.position.y;
+        if (Mathf.Abs(diffX) < 10 && Mathf.Abs(diffY) < 10) {
+            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        }
+        
+        if(diffX > 0) {
             transform.localScale = new Vector3(1, 1, 1);
         }
         else {

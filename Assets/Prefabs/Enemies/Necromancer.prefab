@@ -113,8 +113,8 @@ MonoBehaviour:
   spawnPoint: {fileID: 608662264330130041, guid: df5c5de35d45d394f97c979e5a9921d9,
     type: 3}
   spawnMin: 1
-  spawnMax: 1
-  spawnTimeMin: 15
+  spawnMax: 2
+  spawnTimeMin: 5
   spawnTimeMax: 15
 --- !u!61 &1158209637332343530
 BoxCollider2D:

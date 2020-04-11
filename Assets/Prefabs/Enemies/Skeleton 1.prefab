@@ -198,14 +198,16 @@ MonoBehaviour:
   blood: {fileID: 5043947125297122052, guid: 9ee30036dd8f878479602eaf77d41afe, type: 3}
   body: {fileID: 7372002579908772080}
   hurtColor: {r: 1, g: 0, b: 0, a: 1}
-  CameraMove: {fileID: 0}
-  cam: {fileID: 0}
+  CameraMove: {fileID: 7336655724004355358, guid: 1c44399cca2c8504ba8565bd19a0e66f,
+    type: 3}
+  cam: {fileID: 7336655724004355359, guid: 1c44399cca2c8504ba8565bd19a0e66f, type: 3}
   mousePos: {x: 0, y: 0, z: 0}
   damage: 2
   animator: {fileID: 7372002579908772083}
   attackDelay: 0.4
   swingSound: {fileID: 8300000, guid: 5b45df2aba5ee774f8fb85ef81ab4bf5, type: 3}
-  player: {fileID: 0}
-  chaseRadius: 3.42
-  homePosition: {fileID: 0}
+  player: {fileID: 8120465142692892801, guid: 32a6b0b500c9dda428fac19e43034056, type: 3}
+  seeRadius: 3.5
+  ChaseRadius: 5
+  homePosition: {x: 0, y: 0}
   moveSpeed: 2
