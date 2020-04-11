@@ -14,9 +14,7 @@ public class SingleSpawner : MonoBehaviour
         float randProb = Random.value;
         int randSpawnPoint = Random.Range(0, spawnPoints.Length);
         int randObject = Random.Range(0, objects.Length);
-        Debug.Log(randProb);
         if(randProb < probability) {
-            Debug.Log("chuj");
             Instantiate(objects[randObject], spawnPoints[randSpawnPoint].transform.position, Quaternion.identity);
         }
     }
