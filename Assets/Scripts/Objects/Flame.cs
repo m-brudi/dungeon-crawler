@@ -11,7 +11,9 @@ public class Flame : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Player")) {
-            anim.SetTrigger("Fire");
+            if (anim != null) {
+                anim.SetTrigger("Fire");
+            }
         }
         flameLight.SetActive(true);
     }
