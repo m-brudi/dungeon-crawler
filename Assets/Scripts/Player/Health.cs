@@ -51,7 +51,7 @@ public class Health : MonoBehaviour
         Time.timeScale = 0.1f;
         yield return new WaitForSeconds(.3f);
         Time.timeScale = 1;
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public IEnumerator Flash() {

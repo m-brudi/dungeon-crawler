@@ -20,67 +20,59 @@ public class Skeleton: Enemy
     private Animator anim;
     private Rigidbody2D myRigidbody;
     private bool playerInRange = false;
-    private bool walk = true;
+    private bool walk = false;
     private float diff;
-    private bool doneWaiting = false;
     private float actionRadius;
     private float returnTime;
+
+
     void Start() {
         anim = GetComponent<Animator>();
         player = GameObject.FindWithTag("Player");
         homePosition = new Vector2(transform.position.x, transform.position.y);
         actionRadius = seeRadius;
         
+
     }
 
     void FixedUpdate() {
         diff = player.transform.position.x - transform.position.x;
-        CheckDistance();
-    }
+        //CheckDistance();
+        if (Vector2.Distance(player.transform.position, transform.position) <= 0.8f) {
+            //if player in range for attack
 
-    void CheckDistance() {
-        //if player in range for attack
-        if (Vector3.Distance(player.transform.position, transform.position) <= 0.8f) {
-            walk = false;
         }
 
-        //if player in chase radius
-        if (Vector3.Distance(player.transform.position, transform.position) <= actionRadius && walk) {
+        if (Vector2.Distance(player.transform.position, transform.position) <= actionRadius) {
+            //if player in chase radius
+            walk = false;
+            chasePlayer();
 
-            actionRadius = ChaseRadius;
 
-            if (diff > 0) {
-                transform.localScale = new Vector3(1, 1, 1);
-            } else {
-                transform.localScale = new Vector3(-1, 1, 1);
-            }
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
-            anim.SetTrigger("Walking");
-            doneWaiting = false;
-            StopCoroutine(WaitForReturn());
-
-        //if player not in range and skeleton not close to home position
-        } else if (Vector3.Distance(transform.position, homePosition) > 2) {
-
-            StartCoroutine(WaitForReturn());
-
-            if (doneWaiting) {
+        } else if (Vector2.Distance(transform.position, homePosition) >2) {
+            //if player not in range and skeleton not close to home position
+            
+            if (walk) {
+               
+                StopCoroutine(WaitForReturn());
                 if (homePosition.x - transform.position.x > 0) {
                     transform.localScale = new Vector3(1, 1, 1);
                 } else {
                     transform.localScale = new Vector3(-1, 1, 1);
                 }
+                anim.SetBool("Walking", true);
                 transform.position = Vector3.MoveTowards(transform.position, homePosition, moveSpeed * Time.deltaTime);
-                walk = true;
-                anim.SetTrigger("Walking");
             } else {
-                anim.SetTrigger("notWalking");
+                walk = false;
+                StartCoroutine(WaitForReturn());
             }
+
             //is in home position
         } else {
-            doneWaiting = false;
+            walk = false;
             actionRadius = seeRadius;
-            anim.SetTrigger("notWalking");
+            anim.SetBool("Walking",false);
+
         }
     }
 
@@ -91,19 +83,28 @@ public class Skeleton: Enemy
 
         }
     }
-    private void OnTriggerStay2D(Collider2D collision) {
-        if (collision.gameObject.tag == "Player") {
-           
-
-        }
-    }
     private void OnTriggerExit2D(Collider2D collision) {
         if (collision.gameObject.tag == "Player") {
             playerInRange = false;
-            walk = true;
         }
     }
+    public void chasePlayer() {
+        StopCoroutine(WaitForReturn());
+        actionRadius = ChaseRadius;
 
+        if (diff > 0) {
+            transform.localScale = new Vector3(1, 1, 1);
+        } else {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
+        anim.SetTrigger("Walking");
+       
+    }
+
+    public void returnHome() {
+        
+    }
     public void attack() {
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         AudioSource.PlayClipAtPoint(swingSound, transform.position);
@@ -131,9 +132,12 @@ public class Skeleton: Enemy
 
     //Time to wait before goin back to homeposition
     private IEnumerator WaitForReturn() {
-        returnTime = UnityEngine.Random.Range(3,5);
+        walk = false;
+        returnTime = UnityEngine.Random.Range(3,8);
+        Debug.Log("waiting for: " + returnTime);
+        anim.SetBool("Walking", false);
         yield return new WaitForSeconds(returnTime);
-        doneWaiting = true;
+        walk = true;
     }
 
     private void OnDrawGizmosSelected() {

@@ -29,7 +29,7 @@ public class Necromancer : Enemy
 
     }
 
-    private void Update() {
+    private void FixedUpdate() {
         diffX = player.transform.position.x - transform.position.x;
         diffY = player.transform.position.y - transform.position.y;
     }

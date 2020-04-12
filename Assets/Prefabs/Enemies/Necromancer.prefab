@@ -104,8 +104,9 @@ MonoBehaviour:
   blood: {fileID: 5043947125297122052, guid: 9ee30036dd8f878479602eaf77d41afe, type: 3}
   body: {fileID: 8432212137094581535}
   hurtColor: {r: 1, g: 0, b: 0, a: 1}
-  CameraMove: {fileID: 0}
-  cam: {fileID: 0}
+  CameraMove: {fileID: 7336655724004355358, guid: 1c44399cca2c8504ba8565bd19a0e66f,
+    type: 3}
+  cam: {fileID: 7336655724004355359, guid: 1c44399cca2c8504ba8565bd19a0e66f, type: 3}
   mousePos: {x: 0, y: 0, z: 0}
   spawnRadius: 4
   objectToSpawn: {fileID: 6956648666325756566, guid: f551cf47abe4d5d419a8d140958ad68c,
@@ -150,7 +151,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8432212137094581520}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -161,5 +162,5 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
