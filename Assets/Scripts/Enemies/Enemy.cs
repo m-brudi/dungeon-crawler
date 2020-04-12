@@ -28,7 +28,6 @@ public class Enemy : MonoBehaviour
         
         if (health <= 0)
         {
-            Debug.Log("umieram");
             //sound
             AudioSource.PlayClipAtPoint(deathSound, transform.position);
             

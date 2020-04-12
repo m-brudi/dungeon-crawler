@@ -14,7 +14,8 @@ public class Flame : MonoBehaviour
             if (anim != null) {
                 anim.SetTrigger("Fire");
             }
+            flameLight.SetActive(true);
         }
-        flameLight.SetActive(true);
+        
     }
 }

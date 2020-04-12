@@ -12,8 +12,8 @@ public class MagicBullet : MonoBehaviour
     public float knockTime;
     private GameObject range;
     void OnCollisionEnter2D(Collision2D collision) {
-        range = Instantiate(greenRange, collision.transform.position, Quaternion.identity);
-
+        range = Instantiate(greenRange, gameObject.transform.position, Quaternion.identity);
+        Destroy(range, 0.5f);
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(transform.position, attackRadius, whatIsEnemies);
         
 
@@ -32,7 +32,7 @@ public class MagicBullet : MonoBehaviour
             }
         }
         gameObject.GetComponent<Renderer>().enabled = false;
-        
+        Destroy(gameObject,1f);
     }
     private IEnumerator KnockCo(Rigidbody2D enemy) {
         yield return new WaitForSeconds(knockTime);
@@ -40,8 +40,8 @@ public class MagicBullet : MonoBehaviour
             enemy.velocity = Vector2.zero;
             enemy.isKinematic = true;
         }
-        Destroy(range);
-        Destroy(gameObject);
+        
+        
     }
 
     private void OnDrawGizmosSelected() {

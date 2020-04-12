@@ -134,7 +134,6 @@ public class Skeleton: Enemy
     private IEnumerator WaitForReturn() {
         walk = false;
         returnTime = UnityEngine.Random.Range(3,8);
-        Debug.Log("waiting for: " + returnTime);
         anim.SetBool("Walking", false);
         yield return new WaitForSeconds(returnTime);
         walk = true;
