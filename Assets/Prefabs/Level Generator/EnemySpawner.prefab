@@ -81,6 +81,8 @@ MonoBehaviour:
   - {fileID: 7372002579908772086, guid: ca226e4d3ba9f6446ba58c236a765be1, type: 3}
   - {fileID: 8432212137094581520, guid: 05af2f69da821df44a563bdc038fc0f7, type: 3}
   - {fileID: 7372002579908772086, guid: ca226e4d3ba9f6446ba58c236a765be1, type: 3}
+  - {fileID: 2612443389145398310, guid: 55881b7db519f584d81f2f161f0e1db6, type: 3}
+  - {fileID: 2612443389145398310, guid: 55881b7db519f584d81f2f161f0e1db6, type: 3}
   probability: 0.2
 --- !u!1 &4291062683502909993
 GameObject:
@@ -129,6 +131,8 @@ MonoBehaviour:
   - {fileID: 7372002579908772086, guid: ca226e4d3ba9f6446ba58c236a765be1, type: 3}
   - {fileID: 8432212137094581520, guid: 05af2f69da821df44a563bdc038fc0f7, type: 3}
   - {fileID: 7372002579908772086, guid: ca226e4d3ba9f6446ba58c236a765be1, type: 3}
+  - {fileID: 2612443389145398310, guid: 55881b7db519f584d81f2f161f0e1db6, type: 3}
+  - {fileID: 2612443389145398310, guid: 55881b7db519f584d81f2f161f0e1db6, type: 3}
   probability: 0.2
 --- !u!1 &7536546378690380284
 GameObject:
@@ -177,6 +181,8 @@ MonoBehaviour:
   - {fileID: 7372002579908772086, guid: ca226e4d3ba9f6446ba58c236a765be1, type: 3}
   - {fileID: 8432212137094581520, guid: 05af2f69da821df44a563bdc038fc0f7, type: 3}
   - {fileID: 7372002579908772086, guid: ca226e4d3ba9f6446ba58c236a765be1, type: 3}
+  - {fileID: 2612443389145398310, guid: 55881b7db519f584d81f2f161f0e1db6, type: 3}
+  - {fileID: 2612443389145398310, guid: 55881b7db519f584d81f2f161f0e1db6, type: 3}
   probability: 0.2
 --- !u!1 &8651850434361702589
 GameObject:
@@ -225,4 +231,6 @@ MonoBehaviour:
   - {fileID: 7372002579908772086, guid: ca226e4d3ba9f6446ba58c236a765be1, type: 3}
   - {fileID: 8432212137094581520, guid: 05af2f69da821df44a563bdc038fc0f7, type: 3}
   - {fileID: 7372002579908772086, guid: ca226e4d3ba9f6446ba58c236a765be1, type: 3}
+  - {fileID: 2612443389145398310, guid: 55881b7db519f584d81f2f161f0e1db6, type: 3}
+  - {fileID: 2612443389145398310, guid: 55881b7db519f584d81f2f161f0e1db6, type: 3}
   probability: 0.2

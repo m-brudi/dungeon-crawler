@@ -26,7 +26,7 @@ public class EnemyFollow : MonoBehaviour
     {
         float diffX = player.transform.position.x - transform.position.x;
         float diffY = player.transform.position.y - transform.position.y;
-        if (Mathf.Abs(diffX) < 10 && Mathf.Abs(diffY) < 10) {
+        if (Mathf.Abs(diffX) < 10 && Mathf.Abs(diffY) < 20) {
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
         

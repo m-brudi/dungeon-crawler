@@ -207,7 +207,7 @@ MonoBehaviour:
   attackDelay: 0.4
   swingSound: {fileID: 8300000, guid: 5b45df2aba5ee774f8fb85ef81ab4bf5, type: 3}
   player: {fileID: 8120465142692892801, guid: 32a6b0b500c9dda428fac19e43034056, type: 3}
-  seeRadius: 3.5
-  ChaseRadius: 5
+  seeRadius: 3.7
+  ChaseRadius: 10
   homePosition: {x: 0, y: 0}
   moveSpeed: 2

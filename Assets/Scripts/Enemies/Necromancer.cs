@@ -32,6 +32,7 @@ public class Necromancer : Enemy
     private void FixedUpdate() {
         diffX = player.transform.position.x - transform.position.x;
         diffY = player.transform.position.y - transform.position.y;
+
     }
 
     private void SpawnEnemies() {
@@ -50,7 +51,7 @@ public class Necromancer : Enemy
         }
     }
     private IEnumerator Wait(Vector2 position, GameObject spawn) {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         Instantiate(objectToSpawn, position, Quaternion.identity);
         Destroy(spawn);
     }
