@@ -5,6 +5,7 @@ using UnityEngine;
 public class Hammer : MonoBehaviour
 {
     public Transform attackPos;
+    public GameObject player;
     public float attackRadius;
     public LayerMask whatIsEnemies;
     public int damage;
@@ -19,6 +20,11 @@ public class Hammer : MonoBehaviour
     public float knockTime;
 
     public Vector3 mousePos;
+
+    private void Start() {
+        player = GameObject.Find("PlayerHolder");
+        damage = player.GetComponent<PlayerVariables>().hammerDamage;
+    }
 
     void Update() {
         if (Input.GetMouseButtonDown(0)) {

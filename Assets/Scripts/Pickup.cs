@@ -8,9 +8,10 @@ public class Pickup : MonoBehaviour
     public float speed = 50f;
     private Inventory inventory;
     public GameObject itemButton;
-    GameObject weapons;
     private int activeSlot;
     private bool allTaken = false;
+    private bool weaponTaken = false;
+
 
     // Start is called before the first frame update
     private void Start()
@@ -38,6 +39,7 @@ public class Pickup : MonoBehaviour
                 break;
             }
         }
+
     }
 
 
@@ -45,21 +47,27 @@ public class Pickup : MonoBehaviour
     //if all slots are taken put item in selected slot
     private void OnTriggerStay2D(Collider2D collision)
     {
+        
         if (collision.CompareTag("Player"))
         {
-            for (int i = 0; i < inventory.slots.Length; i++)
-            {
-                if (inventory.isFull[i] == false)
-                {
+            for (int i = 0; i < inventory.slots.Length; i++) {
+                if (inventory.slots[i].transform.childCount > 0) {
+                    if (inventory.slots[i].transform.GetChild(0).gameObject.name == (itemButton.gameObject.name + "(Clone)")) {
+                        weaponTaken = true;
+                    //} else {
+                    //    weaponTaken = true;
+                    }
+                }
+            }
+            for (int i = 0; i < inventory.slots.Length; i++) {
+
+                if (inventory.isFull[i] == false && !weaponTaken) {
                     inventory.isFull[i] = true;
                     Instantiate(itemButton, inventory.slots[i].transform, false);
                     Destroy(gameObject);
                     break;
-                }
-
-                //if all slots taken and lshift clicked switch items
-                else if (allTaken && Input.GetKey(KeyCode.LeftShift))
-                {
+                } else if (allTaken && Input.GetKey(KeyCode.LeftShift)&& !weaponTaken) {
+                    //if all slots taken and lshift clicked switch items    
                     //spawn the dropped object back to the scene
                     GameObject.Find("Weapons").GetComponent<WeaponSwitch>().HideWeapon(activeSlot);
                     inventory.slots[activeSlot].transform.GetChild(0).gameObject.GetComponent<Spawn>().SpawnDroppedItem();
@@ -70,6 +78,7 @@ public class Pickup : MonoBehaviour
 
                     //prevent from switching back and forth
                     StartCoroutine(Wait());
+                    weaponTaken = false;
                     break;
                 }
             }

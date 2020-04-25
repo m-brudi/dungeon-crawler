@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 6813820985047631856}
   - component: {fileID: 6813820985047631871}
   - component: {fileID: 6813820985047631870}
-  - component: {fileID: 6813820985047631858}
   - component: {fileID: 6813820985047631859}
+  - component: {fileID: 1605292910}
+  - component: {fileID: 1605292905}
   m_Layer: 0
   m_Name: LootBox 1
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6813820985047631869}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.32, y: -0.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -4527102890844184117, guid: ec34bf3e3cb06f448ac61fcecd4327e2,
+  m_Sprite: {fileID: -3737266746655423200, guid: ec34bf3e3cb06f448ac61fcecd4327e2,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -99,7 +100,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.11850357}
+  m_Offset: {x: 0, y: -0.24814177}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -110,7 +111,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.62755966}
+  m_Size: {x: 1, y: 2.3848715}
   m_EdgeRadius: 0
 --- !u!50 &6813820985047631870
 Rigidbody2D:
@@ -133,46 +134,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &6813820985047631858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6813820985047631869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24c480c015f4fb9478dae731fe7f52d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lootDropTable:
-    lootDropItems:
-    - item: {fileID: 0}
-      probabilityWeight: 100
-      probabilityPercent: 17.4
-      probabilityRangeFrom: 0
-      probabilityRangeTo: 0
-    - item: {fileID: 0}
-      probabilityWeight: 100
-      probabilityPercent: 25
-      probabilityRangeFrom: 0
-      probabilityRangeTo: 0
-    - item: {fileID: 0}
-      probabilityWeight: 100
-      probabilityPercent: 25
-      probabilityRangeFrom: 0
-      probabilityRangeTo: 0
-    - item: {fileID: 0}
-      probabilityWeight: 100
-      probabilityPercent: 25
-      probabilityRangeFrom: 0
-      probabilityRangeTo: 0
-    - item: {fileID: 0}
-      probabilityWeight: 1
-      probabilityPercent: 25
-      probabilityRangeFrom: 0
-      probabilityRangeTo: 0
-  numItemsToDrop: 1
 --- !u!95 &6813820985047631859
 Animator:
   serializedVersion: 3
@@ -192,3 +153,79 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &1605292910
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6813820985047631869}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.20165873}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.59668255}
+  m_EdgeRadius: 0
+--- !u!114 &1605292905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6813820985047631869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24c480c015f4fb9478dae731fe7f52d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootDropTable:
+    lootDropItems:
+    - item: {fileID: 5176524559009724453, guid: 537d7e81fd81c9c43a689aaed67bc9b5,
+        type: 3}
+      probabilityWeight: 16
+      probabilityPercent: 16.666666
+      probabilityRangeFrom: 0
+      probabilityRangeTo: 16
+    - item: {fileID: 6462708584471350885, guid: 5c03b5a44183dfa4280d2f8d6c67d4a8,
+        type: 3}
+      probabilityWeight: 16
+      probabilityPercent: 16.666666
+      probabilityRangeFrom: 16
+      probabilityRangeTo: 32
+    - item: {fileID: 7087752907078942169, guid: f42e98760bf923946a4ac5ae5fd10ddd,
+        type: 3}
+      probabilityWeight: 16
+      probabilityPercent: 16.666666
+      probabilityRangeFrom: 32
+      probabilityRangeTo: 48
+    - item: {fileID: 2579718328875582275, guid: f56d207298f76e8409138a49173067be,
+        type: 3}
+      probabilityWeight: 16
+      probabilityPercent: 16.666666
+      probabilityRangeFrom: 48
+      probabilityRangeTo: 64
+    - item: {fileID: 8034423850830249413, guid: ecc853fc10b6ce74b96ed9862c499b0f,
+        type: 3}
+      probabilityWeight: 16
+      probabilityPercent: 16.666666
+      probabilityRangeFrom: 64
+      probabilityRangeTo: 80
+    - item: {fileID: 0}
+      probabilityWeight: 16
+      probabilityPercent: 16.666666
+      probabilityRangeFrom: 80
+      probabilityRangeTo: 96
+  numItemsToDrop: 1

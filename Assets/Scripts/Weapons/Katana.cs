@@ -6,6 +6,7 @@ public class Katana : MonoBehaviour
 {
     public Transform attackPos;
     public float attackRangeX;
+    public GameObject player;
     public float attackRangeY;
     public LayerMask whatIsEnemies;
     public int damage;
@@ -24,6 +25,11 @@ public class Katana : MonoBehaviour
 
     public Vector3 mousePos;
 
+    private void Start() {
+        player = GameObject.Find("PlayerHolder");
+        damage = player.GetComponent<PlayerVariables>().katanaDamage;
+
+    }
     void Update() {
         if (Input.GetMouseButtonDown(0)) {
             attack();

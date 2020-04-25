@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Sword : MonoBehaviour
 {
+    public GameObject player;
     public Transform attackPos;
     public float attackRangeX;
     public float attackRangeY;
@@ -21,6 +22,11 @@ public class Sword : MonoBehaviour
 
 
     public Vector3 mousePos;
+
+    private void Start() {
+        player = GameObject.Find("PlayerHolder");
+        damage = player.GetComponent<PlayerVariables>().swordDamage;
+    }
 
     void Update() {
         if (Input.GetMouseButtonDown(0)) {

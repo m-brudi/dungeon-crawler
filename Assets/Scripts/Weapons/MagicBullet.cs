@@ -5,12 +5,18 @@ using UnityEngine;
 public class MagicBullet : MonoBehaviour
 {
     public GameObject greenhit;
+    public GameObject player;
     public GameObject greenRange;
     public float attackRadius;
     public LayerMask whatIsEnemies;
     public int damage;
     public float knockTime;
     private GameObject range;
+
+    private void Start() {
+        player = GameObject.Find("PlayerHolder");
+        damage = player.GetComponent<PlayerVariables>().greenMagicDamage;
+    }
     void OnCollisionEnter2D(Collision2D collision) {
         range = Instantiate(greenRange, gameObject.transform.position, Quaternion.identity);
         Destroy(range, 0.5f);
